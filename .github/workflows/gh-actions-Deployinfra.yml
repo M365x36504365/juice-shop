@@ -46,10 +46,10 @@ jobs:
         with:
           inlineScript: |
             az deployment group create \
-              --resource-group ${{ secrets.DEVRESOURCEGROUP }} \
-              --name deployinfradev \
-              --template-file ARM-DevSecOps.json \
-              --verbose
+            --resource-group "${{ secrets.DEVRESOURCEGROUP }}" \
+            --name deployinfradev \
+            --template-file ARM-DevSecOps.json \
+            --verbose
 
   DeployProdInfrastructure:
     name: Deploy Production Infrastructure
