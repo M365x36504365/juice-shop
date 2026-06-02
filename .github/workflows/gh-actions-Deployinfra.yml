@@ -45,8 +45,7 @@ jobs:
         uses: azure/cli@v2
         with:
           inlineScript: |
-            az deployment group create \
-            --resource-group "${{ secrets.DEVRESOURCEGROUP }}" \
+            az deployment group create --resource-group "${{ secrets.DEVRESOURCEGROUP }}" \
             --name "deployinfradev" \
             --template-file ARM-DevSecOps.json \
             --verbose
