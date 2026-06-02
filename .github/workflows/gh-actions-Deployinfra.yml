@@ -24,7 +24,8 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Display Selected Region
-        run: echo "Deploying to region: ${{ secrets.LOCATION }}"
+        run: |
+         echo "Deploying to region: ${{ secrets.LOCATION }}"
 
       - name: Create Resource Groups
         uses: azure/cli@v2
