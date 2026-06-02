@@ -47,7 +47,7 @@ jobs:
           inlineScript: |
             az deployment group create \
             --resource-group "${{ secrets.DEVRESOURCEGROUP }}" \
-            --name deployinfradev \
+            --name "deployinfradev" \
             --template-file ARM-DevSecOps.json \
             --verbose
 
@@ -73,6 +73,6 @@ jobs:
           inlineScript: |
             az deployment group create \
               --resource-group ${{ secrets.PRODRESOURCEGROUP }} \
-              --name deployinfraprod \
+              --name "deployinfraprod" \
               --template-file ARM-DevSecOps-Prod.json \
               --verbose
